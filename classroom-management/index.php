@@ -14,7 +14,6 @@
 
     $query = $database->prepare('SELECT * FROM Students');
     $query-> execute();
-
     $students = $query->fetchAll();
 
     if(
@@ -49,7 +48,7 @@
             header('Location:/');
             exit;
         }
-
+        
     }
 
     // var_dump($students);
@@ -82,8 +81,8 @@
         <div >
             <!-- add new form -->
         <form method="POST" 
-        action="<?php echo $_SERVER['REQUEST_URI'] ?>" 
-        class="mt-4 d-flex justify-content-between align-items-center">
+            action="<?php echo $_SERVER['REQUEST_URI'] ?>" 
+            class="mt-4 d-flex justify-content-between align-items-center">
             <input
             type="text"
             class="form-control"
